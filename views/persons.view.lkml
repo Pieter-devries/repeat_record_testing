@@ -17,6 +17,9 @@ view: persons {
 
   dimension: phoneNumber {hidden:yes}
 
+  dimension: persons_phone_number_test {
+    sql: (SELECT number FROM UNNEST([${phoneNumber}])) ;;
+  }
   measure: average_age {
     type: average
     sql: ${age} ;;

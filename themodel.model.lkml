@@ -34,3 +34,7 @@ explore: persons {
     relationship: one_to_one
   }
 }
+
+explore: person2 {
+  view_name: persons
+}
